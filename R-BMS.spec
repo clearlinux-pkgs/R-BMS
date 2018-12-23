@@ -4,7 +4,7 @@
 #
 Name     : R-BMS
 Version  : 0.3.4
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/BMS_0.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BMS_0.3.4.tar.gz
 Summary  : Bayesian Model Averaging Library
