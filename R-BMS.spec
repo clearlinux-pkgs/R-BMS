@@ -4,35 +4,35 @@
 #
 Name     : R-BMS
 Version  : 0.3.4
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/BMS_0.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BMS_0.3.4.tar.gz
 Summary  : Bayesian Model Averaging Library
 Group    : Development/Tools
 License  : Artistic-2.0
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 No detailed description available
 
 %prep
 %setup -q -c -n BMS
+cd %{_builddir}/BMS
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571804469
+export SOURCE_DATE_EPOCH=1589514556
 
 %install
-export SOURCE_DATE_EPOCH=1571804469
+export SOURCE_DATE_EPOCH=1589514556
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
